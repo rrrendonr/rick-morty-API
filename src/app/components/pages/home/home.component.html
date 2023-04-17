@@ -1,0 +1,10 @@
+<app-nav></app-nav>
+<div class="search-bar flex-center scroll" infiniteScroll (scrolled)="onScrollDown()" [infiniteScrollDistance]="2">
+  <app-search (searchName)="getSearchCharacter($event)"></app-search>
+</div>
+<div class="grid">
+  <app-card-character
+    [character]="character"
+    *ngFor="let character of characters"
+  ></app-card-character>
+</div>

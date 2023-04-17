@@ -1,0 +1,27 @@
+<article class="card">
+  <div class="card__img-container">
+    <img src="{{ character.image }}" alt="" class="img" />
+  </div>
+  <div class="card-info">
+    <div class="section">
+      <h2 class="name">{{ character.name }}</h2>
+      <span class="normal-txt status">
+        <span
+          class="icon"
+          [class.alive]="character.status == 'Alive'"
+          [class.dead]="character.status == 'Dead'"
+          [class.unknown]="character.status == 'unknown'"
+        ></span>
+        {{ character.status }} | {{ character.species }}
+      </span>
+    </div>
+    <div class="section margin">
+      <span class="text-soft-color">Última ubicación:</span>
+      <span class="normal-txt">{{ character.location.name }}</span>
+    </div>
+    <div class="section margin">
+      <span class="text-soft-color">Originario de:</span>
+      <span class="normal-txt">{{ character.origin.name }}</span>
+    </div>
+  </div>
+</article>

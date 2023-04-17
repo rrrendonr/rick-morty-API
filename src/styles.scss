@@ -1,1 +1,63 @@
 /* You can add global styles to this file, and also import other style files */
+@import url(styles/reset.scss);
+
+html,
+body {
+  height: 100%;
+  font-size: 62.5%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.glass {
+  background: rgba(19, 63, 176, 0.27);
+  box-shadow: 0 4px 30px rgba(7, 77, 216, 0.1);
+  backdrop-filter: blur(60px);
+  width: 100%;
+  min-height: 100vh;
+}
+
+.content {
+  background: url(./assets/img/bg.gif);
+}
+
+.grid{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 80rem) {
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 120rem) {
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.normal-txt{
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.text-soft-color{
+  color: rgb(207, 206, 206);
+  font-size: 1.6rem;
+  font-weight: 500;
+}
