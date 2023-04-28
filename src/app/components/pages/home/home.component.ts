@@ -36,17 +36,12 @@ export class HomeComponent {
 
 @HostListener('window:scroll', [])
   onScrollDown(){
-    console.log('scroll down');
     let height = this.document.documentElement.scrollTop;
     let top = this.document.documentElement.scrollHeight;
     let viewport = window.innerHeight;
 
     if ((this.info.next !== null && this.params.page < this.info.pages) && (top - height == viewport)) {
       this.params.page++;
-      if (this.params.name !== '') {
-        console.log(this.params);
-        this.getSearchCharacter(this.params.name)
-      }
       this.getCharacters()
     }
     return
@@ -59,7 +54,6 @@ export class HomeComponent {
         const {info, results} = res;
         this.characters.push(...results)
         this.info = info;
-        console.log(this.characters, this.info);
       },
       error: (error: any) => {
 
@@ -68,7 +62,7 @@ export class HomeComponent {
   }
 
   getSearchCharacter(name: string){
-    ( this.params.page > 1)
+    this.params.page = 1;
     this.params.name = name;
     this.characterSvc.getCharacters(this.params)
     .subscribe({
@@ -76,7 +70,6 @@ export class HomeComponent {
         const {info, results} = res;
         this.characters = results
         this.info = info;
-        console.log(this.characters, this.info);
       },
       error: (error: any) => {
 
