@@ -1,7 +1,7 @@
 [build]
-  publish = “dist/rick-morty-api”
-  command = “ng build”
+  publish = "dist/rick-morty-api"
+  command = "ng build"
 [[redirects]]
-  from = “/*”
-  to = “/index.html”
+  from = "/*"
+  to = "/index.html"
   status = 200
