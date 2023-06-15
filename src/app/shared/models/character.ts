@@ -14,3 +14,7 @@ export interface Character {
   location: Location,
   origin: Origin
 }
+
+export interface CharacterDetail extends Character{
+  episode: Array<string>
+}

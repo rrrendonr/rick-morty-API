@@ -62,13 +62,33 @@
   margin-right: 10px;
 }
 
-hr{
-  border: 1px red solid;
-}
-
 .section-icon {
   display: flex;
   align-items: center;
 }
 
+.info-character {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 64px;
+}
+
+.chapter-card {
+  width: 100%;
+  max-width: 400px;
+  height: 100px;
+  background: rgba(7, 7, 7, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  margin: 8px;
+  border-radius: 8px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.h1 {
+  font-size: 1.8rem;
+}
 
